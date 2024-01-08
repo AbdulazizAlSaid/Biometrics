@@ -1,0 +1,1 @@
+In order to run this code, all you need to run is the main.py after installing all the libraries. 
