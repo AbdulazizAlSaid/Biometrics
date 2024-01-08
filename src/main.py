@@ -9,7 +9,7 @@ def main():
 
     # Adjust the target_length as needed
     target_length = 256
-    folder_path = "C:/Users/salam/Desktop/Biometrics/Database"
+    folder_path = "Your/Folderpath/Location"
     X, y = load_and_extract_minutiae(folder_path, target_length=target_length)
 
     # Check the size of the dataset
@@ -58,7 +58,7 @@ def main():
 
 
     # Testing the system with the given altered images
-    approved_altered, rejected_altered, true_positives_altered, true_negatives_altered, false_positives_altered, false_negatives_altered = read_new_folder("C:/Users/salam/Desktop/Biometrics/Altered/2",
+    approved_altered, rejected_altered, true_positives_altered, true_negatives_altered, false_positives_altered, false_negatives_altered = read_new_folder("Your/Folderpath/Location",
                                                                                                                                                 knn_model,
                                                                                                                                                 target_length=256,
                                                                                                                                                 confidence_threshold=40,
@@ -84,7 +84,7 @@ def main():
 
 
     #Testing the system with the noisy images
-    approved_noise, rejected_noise, true_positives_noise, true_negatives_noise, false_positives_noise, false_negatives_noise = read_new_folder("C:/Users/salam/Desktop/Biometrics/noise/4",
+    approved_noise, rejected_noise, true_positives_noise, true_negatives_noise, false_positives_noise, false_negatives_noise = read_new_folder("Your/Folderpath/Location",
                                                                                                                                                 knn_model,
                                                                                                                                                 target_length=256,
                                                                                                                                                 confidence_threshold=40,
@@ -107,7 +107,7 @@ def main():
     print("F1 Score:", metrics_noise[5])
     
     # Test the system with rotated images
-    approved_rotation, rejected_rotation, true_positives_rotation, true_negatives_rotation, false_positives_rotation, false_negatives_rotation = read_new_folder("C:/Users/salam/Desktop/Biometrics/Rotated_Images/3",
+    approved_rotation, rejected_rotation, true_positives_rotation, true_negatives_rotation, false_positives_rotation, false_negatives_rotation = read_new_folder("Your/Folderpath/Location",
                                                                                                                                                                 knn_model,
                                                                                                                                                                 target_length=256,
                                                                                                                                                                 confidence_threshold=40,
